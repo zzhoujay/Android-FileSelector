@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dialog"
+        android:id="@+id/button"
+        android:layout_above="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="120dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activity"
+        android:id="@+id/button2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/button">
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner_theme"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:spinnerMode="dropdown"
+            />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner_filter"
+            android:layout_below="@+id/spinner_theme"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:spinnerMode="dropdown"
+            android:layout_alignRight="@+id/spinner_theme"
+            android:layout_alignEnd="@+id/spinner_theme"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/positive_mode"
+            android:id="@+id/checkBox_mode"
+            android:checked="true"
+            android:layout_above="@+id/checkBox_multi"
+            android:layout_alignLeft="@+id/checkBox_multi"
+            android:layout_alignStart="@+id/checkBox_multi"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Theme"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:id="@+id/textView_theme"
+            android:layout_above="@+id/spinner_filter"
+            android:layout_toRightOf="@+id/checkBox_mode"
+            android:layout_toEndOf="@+id/checkBox_mode"
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Filter"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/textView_filter"
+            android:layout_alignBottom="@+id/spinner_filter"
+            android:layout_alignLeft="@+id/textView_theme"
+            android:layout_alignStart="@+id/textView_theme"
+            android:layout_below="@+id/spinner_theme"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="showHit"
+            android:id="@+id/checkBox_show_hit"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:checked="false"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/checkBox_multi"
+            android:layout_alignStart="@+id/checkBox_multi"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MultiMode"
+            android:id="@+id/checkBox_multi"
+            android:layout_above="@+id/checkBox_show_hit"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:checked="false"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/button3"
+            android:layout_above="@+id/checkBox_show_hit"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
